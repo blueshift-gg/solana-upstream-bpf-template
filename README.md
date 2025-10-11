@@ -19,7 +19,7 @@ cargo install cargo-generate
 Create a new project from this template:
 
 ```bash
-cargo generate gh:{{gh_username}}/solana-upstream-bpf-template
+cargo generate --git https://github.com/blueshift-gg/solana-upstream-bpf-template.git
 ```
 
 ## Building
