@@ -29,7 +29,7 @@ mod tests {
             program_id: [2u8;32].into(),
             accounts: vec![],
             data: vec![]
-        }, &vec![], &[
+        }, &[], &[
             Check::success()
         ]);
     }
