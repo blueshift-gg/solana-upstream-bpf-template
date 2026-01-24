@@ -3,7 +3,7 @@ rustflags = [
     "-C", "linker=sbpf-linker",
     "-C", "panic=abort",
     "-C", "save-temps",
-    "-C", "link-arg=--llvm-args=-bpf-stack-size=8192",
+    "-C", "link-arg=--llvm-args=-bpf-stack-size=4096",
     "-C", "relocation-model=static",
 ]
 
