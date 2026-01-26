@@ -1,6 +1,3 @@
-[unstable]
-build-std = ["core", "alloc"]
-
 [target.bpfel-unknown-none]
 rustflags = [
     "-C", "linker=sbpf-linker",
@@ -11,4 +8,4 @@ rustflags = [
 ]
 
 [alias]
-build-bpf = "build --release --target bpfel-unknown-none"
+build-bpf = "build -Z build-std=core,alloc --release --target bpfel-unknown-none"
