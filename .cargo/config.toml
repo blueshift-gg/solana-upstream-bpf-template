@@ -5,9 +5,14 @@ build-std = ["core", "alloc"]
 rustflags = [
     "-C", "linker=sbpf-linker",
     "-C", "panic=abort",
-    "-C", "save-temps",
-    "-C", "link-arg=--llvm-args=-bpf-stack-size=4096",
     "-C", "relocation-model=static",
+    "-C", "target-cpu=v4",
+    "-C", "target-feature=+allows-misaligned-mem-access",
+    "-C", "link-arg=--llvm-args=--bpf-stack-size=4096",
+    "-C", "link-arg=--llvm-args=--bpf-max-stores-per-memfunc=5",
+    "-C", "link-arg=--llvm-args=--disable-gotox",
+    "-C", "link-arg=--llvm-args=--disable-ldsx",
+    "-C", "link-arg=--llvm-args=--disable-movsx",
 ]
 
 [alias]
