@@ -24,7 +24,7 @@ mod tests {
 
     #[test]
     pub fn hello_world() {
-        let mollusk = Mollusk::new(&[2u8;32].into(), "target/bpfel-unknown-none/release/lib{{crate_name}}");
+        let mollusk = Mollusk::new(&[2u8;32].into(), "target/deploy/{{crate_name}}");
         mollusk.process_and_validate_instruction(&Instruction {
             program_id: [2u8;32].into(),
             accounts: vec![],
