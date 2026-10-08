@@ -1,4 +1,5 @@
 #![cfg_attr(target_arch = "bpf", no_std)]
+use solana_compiler_builtins as _;
 
 #[cfg(target_arch = "bpf")]
 #[panic_handler]

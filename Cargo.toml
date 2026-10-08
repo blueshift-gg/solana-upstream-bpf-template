@@ -7,13 +7,15 @@ license = "MIT"
 [lib]
 crate-type = ["cdylib"]
 
+[dependencies]
+solana-compiler-builtins = "0.1.0"
+
 [dev-dependencies]
 mollusk-svm = "0.7.0"
 solana-instruction = "3.0.0"
 
 [profile.release]
 overflow-checks = true
-lto = "fat"
 codegen-units = 1
 
 [profile.release.build-override]
