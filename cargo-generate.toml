@@ -1,2 +1,5 @@
 [template]
 cargo_generate_version = ">=0.10.0"
+
+[hooks]
+pre = ["pre-script.rhai"]

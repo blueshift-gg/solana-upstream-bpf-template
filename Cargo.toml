@@ -1,8 +1,10 @@
 [package]
 name = "{{project-name}}"
+authors = ["{{authors}}"]
 version = "0.1.0"
 edition = "2021"
-license = "MIT"
+license = "{{license}}"
+readme = "README.md"
 
 [lib]
 crate-type = ["cdylib"]
