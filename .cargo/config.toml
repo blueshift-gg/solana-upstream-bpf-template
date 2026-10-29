@@ -7,7 +7,7 @@ rustflags = [
     "-C", "panic=abort",
     "-C", "relocation-model=static",
     "-C", "target-cpu=v4",
-    "-C", "target-feature=+allows-misaligned-mem-access",
+    "-Z", "llvm-target-feature=+allows-misaligned-mem-access",
     "-C", "link-arg=--llvm-args=--bpf-stack-size=4096",
     "-C", "link-arg=--llvm-args=--bpf-max-stores-per-memfunc=5",
     "-C", "link-arg=--llvm-args=--disable-gotox",
